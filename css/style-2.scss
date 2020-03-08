@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+$color-main: #3F51B5;
+
+$layout-width-inner : 1086px;
+
+$breakpoints: (
+    "sp": "screen and (max-width: 767px)",
+    "tab": "screen and (max-width: 1085px)",
+    "pc" : "screen and (min-width: #{$layout-width-inner})",
+);
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints,$breakpoint)} {
+
+        @content;
+    }
+}
+
+
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Yu Gothic";
+    margin: 0;
+    padding: 0;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+ul,li,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    
+
+    .header__top {
+        position: relative;
+        height: 80px;
+        background-color: $color-main;
+    }
+}
+
+
+.inner {
+    max-width: 100%;
+    width: 1086px;
+    margin: 0 auto;
+
+}
+
+.header__logo {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 200px;
+    margin: 0 auto;
+
+
+}
+
+.header__nav {
+    background-color: white;
+}
+
+.header__menu {
+    margin: auto 0;
+    
+    @include mq('sp') {
+        display :none;
+    }
+}
+    
+.header__list {
+    height: 60px;
+    background-color: $color-main;
+    display: flex;
+    justify-content: space-between;
+   
+    
+    .header__list-menu {
+        width: 217px;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        border: 1px solid white ;
+        border-collapse: collapse;
+
+        a {
+            font-size: 1.6rem;
+            color: #ffffff;
+        }
+
+        
+        
+            
+    }
+    
+}
+.red {
+    background-color: #E81919;
+}
+
+.title {
+    height: 70rem;
+    padding-top: 100px;
+    background: url(../img/mainvisual.png) no-repeat center center;
+    background-size: cover;
+    object-fit: contain;
+
+    @include mq('sp'){
+        height: 100vh;
+    }
+    
+    .title__lead {
+        text-align: center;
+    
+        h1 {
+            display: inline-block;            
+            font-size: 6.8rem;
+            margin: 149px 0 12px 0;
+
+            @include mq('sp') {
+                font-size: 4rem;
+            }
+        }
+        
+        p {
+            font-size: 3.8rem;
+            font-weight: bold;
+
+            @include mq('sp') {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .title__button {
+        text-align: center;
+        
+        button {
+            margin-top: 82px;
+            width: 390px;
+            height: 83px;
+            font-size: 3.6rem;
+            background-color:$color-main;
+            border-radius: 12px;
+            box-shadow: 0px 3px 6px #00000029;
+    
+        }
+
+        a {
+            color: white;
+
+        }
+    }
+}
+
+

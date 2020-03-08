@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+h1 {
+    font-size: 20px;
+    width: 300px;
+    
+}
+
+.a1 {
+    border-bottom: 3px solid #3F51B5;
+}
+
+.a2 {
+    border-bottom: 3px dotted #3F51B5;
+}
+
+.a3 {
+    color: white;
+    background-color: #3F51B5;
+    padding: 5px 10px;
+}
+
+.a4 {
+    color: white;
+    background-color: #7385E9;
+    border-bottom: 3px solid #3F51B5;
+    padding: 5px 10px
+}
+
+.a5 {
+    border-left: 5px solid #3F51B5; 
+    padding-left: 12px;
+}
+
+.a6 {
+    background: linear-gradient(transparent 60%,#DCEE39 60%);
+}
+
+.a7 {
+    background: #DCEE39;
+}
+
+.a8 {
+    position: relative;
+    background: #3F51B5;
+    color: white;
+}
+
+.a8::after {
+    position:absolute;
+    content: '';
+    top: 100%;
+    left: 10%;
+    border: 10px solid transparent;
+    border-top: 10px solid #3F51B5;
+    width: 0px;
+    height: 0px;
+}
+
+.a9 {
+    border-bottom: 3px solid #3F51B5;
+    position: relative;
+}
+
+.a9:after {
+    position: absolute;
+    content: '';
+    display: block;
+    border-bottom: 3px solid #B53F4F;
+    width: 30%;
+}
+
+.a10 {
+    position: relative;
+    padding-left: 15px;
+}
+
+.a10:after {
+    position: absolute;
+    content: '';
+    display: block;
+    border-left: 3px solid #7385E9;
+    top: 27%;
+    left: 0px;
+    height: 15px;
+}
+
+.a11 {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.a11:after {
+    position: absolute;
+    content: '';
+    border-bottom: 4px solid #3F51B5;
+    width: 30px;
+    top: 150%;
+    left: 20%;
+}
+
+.a12 {
+    padding-left: 10px;
+
+}
+
+.icon-1 {
+    margin-right: 10px;
+    
+    color: #3F51B5;
+ }
+
+.a13 {
+    position: relative;
+}
+
+.icon-2 {
+    position: absolute;
+    color: #3F51B5;
+    font-size: 0.8em;
+    right: 110px;
+
+}
+
+.a14 {
+    position: relative;
+    margin: 0 auto;
+}
+
+.a14:before,.a14:after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: 50%;
+    width: 30px;
+    background-color: #3F51B5;
+    height: 2px
+
+}
+
+.a14:before {
+    transform: rotate(60deg);
+    left: -30px;
+}
+
+.a14:after {
+    transform: rotate(-60deg);
+}
+
+.a15 {
+    position: relative;
+    display: inline-block;
+    width: 170px;
+    padding: 0 55px;
+}
+
+.a15:before,.a15:after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: 50%;
+    width: 45px;
+    height: 2px;
+    background-color: #3F51B5;
+}
+
+.a15:before {
+    left:0;
+}
+
+.a15:after {
+    right: 0;
+}
+
+.a16 {
+    text-shadow: 0 0 5px white;
+    background-image:repeating-linear-gradient(
+    -45deg,
+    #7385E9,
+    #7385E9 10px,
+    #3F51B5 15px,#3F51B5 10px
+    );
+}
